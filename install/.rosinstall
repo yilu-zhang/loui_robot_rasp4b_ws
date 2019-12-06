@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/code/loui_robot_rasp4b_ws/install/setup.sh

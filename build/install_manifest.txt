@@ -1,0 +1,9 @@
+/home/pi/code/loui_robot_rasp4b_ws/install/_setup_util.py
+/home/pi/code/loui_robot_rasp4b_ws/install/env.sh
+/home/pi/code/loui_robot_rasp4b_ws/install/setup.bash
+/home/pi/code/loui_robot_rasp4b_ws/install/local_setup.bash
+/home/pi/code/loui_robot_rasp4b_ws/install/setup.sh
+/home/pi/code/loui_robot_rasp4b_ws/install/local_setup.sh
+/home/pi/code/loui_robot_rasp4b_ws/install/setup.zsh
+/home/pi/code/loui_robot_rasp4b_ws/install/local_setup.zsh
+/home/pi/code/loui_robot_rasp4b_ws/install/.rosinstall
