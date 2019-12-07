@@ -1,0 +1,8 @@
+prefix=/home/pi/code/loui_robot_rasp4b_ws/devel
+
+Name: infrared_control
+Description: Description of infrared_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/code/loui_robot_rasp4b_ws/devel/lib 
+Requires: 

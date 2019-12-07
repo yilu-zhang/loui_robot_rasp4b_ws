@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/pi/code/loui_robot_rasp4b_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD="/home/pi/code/loui_robot_rasp4b_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/code/loui_robot_rasp4b_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/pi/code/loui_robot_rasp4b_ws/src:$ROS_PACKAGE_PATH"
