@@ -1,2 +1,2 @@
-infrared_control
+infrared_control:rasp4b_core
 -DCATKIN_DEVEL_PREFIX=/home/pi/code/loui_robot_rasp4b_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pi/code/loui_robot_rasp4b_ws/install -G Unix Makefiles

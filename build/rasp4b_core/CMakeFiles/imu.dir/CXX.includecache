@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/code/loui_robot_rasp4b_ws/src/rasp4b_core/include/imu.h
+wiringPiI2C.h
+-
+math.h
+-
+stdio.h
+-
+
+/home/pi/code/loui_robot_rasp4b_ws/src/rasp4b_core/lib/imu.cpp
+imu.h
+/home/pi/code/loui_robot_rasp4b_ws/src/rasp4b_core/lib/imu.h
+

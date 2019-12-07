@@ -1,0 +1,8 @@
+prefix=/home/pi/code/loui_robot_rasp4b_ws/devel
+
+Name: rasp4b_core
+Description: Description of rasp4b_core
+Version: 0.0.0
+Cflags: -I/home/pi/code/loui_robot_rasp4b_ws/devel/include
+Libs: -L/home/pi/code/loui_robot_rasp4b_ws/devel/lib 
+Requires: geometry_msgs message_generation message_runtime roscpp rospy std_msgs

@@ -269,7 +269,7 @@ infrared_control/preinstall:
 infrared_control/CMakeFiles/infrared_control.dir/all:
 	$(MAKE) -f infrared_control/CMakeFiles/infrared_control.dir/build.make infrared_control/CMakeFiles/infrared_control.dir/depend
 	$(MAKE) -f infrared_control/CMakeFiles/infrared_control.dir/build.make infrared_control/CMakeFiles/infrared_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=1,2 "Built target infrared_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=5,6 "Built target infrared_control"
 .PHONY : infrared_control/CMakeFiles/infrared_control.dir/all
 
 # Include target in all.
@@ -936,6 +936,591 @@ infrared_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: infrared_control/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory rasp4b_core
+
+# Convenience name for "all" pass in the directory.
+rasp4b_core/all: rasp4b_core/CMakeFiles/imu.dir/all
+rasp4b_core/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all
+rasp4b_core/all: rasp4b_core/CMakeFiles/usbcan.dir/all
+rasp4b_core/all: rasp4b_core/CMakeFiles/rasp4b_core.dir/all
+rasp4b_core/all: rasp4b_core/CMakeFiles/driver.dir/all
+
+.PHONY : rasp4b_core/all
+
+# Convenience name for "clean" pass in the directory.
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/imu.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/usbcan.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/clean
+rasp4b_core/clean: rasp4b_core/CMakeFiles/driver.dir/clean
+
+.PHONY : rasp4b_core/clean
+
+# Convenience name for "preinstall" pass in the directory.
+rasp4b_core/preinstall:
+
+.PHONY : rasp4b_core/preinstall
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all: infrared_control/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=10,11 "Built target rasp4b_core_generate_messages_eus"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages_eus: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/rule
+
+.PHONY : rasp4b_core_generate_messages_eus
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/imu.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/imu.dir/all:
+	$(MAKE) -f rasp4b_core/CMakeFiles/imu.dir/build.make rasp4b_core/CMakeFiles/imu.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/imu.dir/build.make rasp4b_core/CMakeFiles/imu.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=3,4 "Built target imu"
+.PHONY : rasp4b_core/CMakeFiles/imu.dir/all
+
+# Include target in all.
+all: rasp4b_core/CMakeFiles/imu.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/imu.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/imu.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/imu.dir/rule
+
+# Convenience name for target.
+imu: rasp4b_core/CMakeFiles/imu.dir/rule
+
+.PHONY : imu
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/imu.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/imu.dir/build.make rasp4b_core/CMakeFiles/imu.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/imu.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/imu.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_geneus"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/rule
+
+# Convenience name for target.
+rasp4b_core_geneus: rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/rule
+
+.PHONY : rasp4b_core_geneus
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_geneus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_gencpp"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/rule
+
+# Convenience name for target.
+rasp4b_core_gencpp: rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/rule
+
+.PHONY : rasp4b_core_gencpp
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_gencpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_eus.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_generate_messages"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all
+
+# Include target in all.
+all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/rule
+
+.PHONY : rasp4b_core_generate_messages
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/usbcan.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/usbcan.dir/all:
+	$(MAKE) -f rasp4b_core/CMakeFiles/usbcan.dir/build.make rasp4b_core/CMakeFiles/usbcan.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/usbcan.dir/build.make rasp4b_core/CMakeFiles/usbcan.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=16,17 "Built target usbcan"
+.PHONY : rasp4b_core/CMakeFiles/usbcan.dir/all
+
+# Include target in all.
+all: rasp4b_core/CMakeFiles/usbcan.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/usbcan.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/usbcan.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/usbcan.dir/rule
+
+# Convenience name for target.
+usbcan: rasp4b_core/CMakeFiles/usbcan.dir/rule
+
+.PHONY : usbcan
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/usbcan.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/usbcan.dir/build.make rasp4b_core/CMakeFiles/usbcan.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/usbcan.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/usbcan.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_genlisp"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/rule
+
+# Convenience name for target.
+rasp4b_core_genlisp: rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/rule
+
+.PHONY : rasp4b_core_genlisp
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_genlisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all: infrared_control/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=9 "Built target rasp4b_core_generate_messages_cpp"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages_cpp: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/rule
+
+.PHONY : rasp4b_core_generate_messages_cpp
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all:
+	$(MAKE) -f rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/build.make rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/build.make rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target _rasp4b_core_generate_messages_check_deps_SensorState"
+.PHONY : rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/rule
+
+# Convenience name for target.
+_rasp4b_core_generate_messages_check_deps_SensorState: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/rule
+
+.PHONY : _rasp4b_core_generate_messages_check_deps_SensorState
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/build.make rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all: infrared_control/CMakeFiles/std_msgs_generate_messages_py.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=14,15 "Built target rasp4b_core_generate_messages_py"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages_py: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/rule
+
+.PHONY : rasp4b_core_generate_messages_py
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_py.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_genpy"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/rule
+
+# Convenience name for target.
+rasp4b_core_genpy: rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/rule
+
+.PHONY : rasp4b_core_genpy
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_genpy.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all: infrared_control/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=12 "Built target rasp4b_core_generate_messages_lisp"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages_lisp: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/rule
+
+.PHONY : rasp4b_core_generate_messages_lisp
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core.dir/all: rasp4b_core/CMakeFiles/imu.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core.dir/all: rasp4b_core/CMakeFiles/usbcan.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core.dir/all: rasp4b_core/CMakeFiles/driver.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=7,8 "Built target rasp4b_core"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core.dir/all
+
+# Include target in all.
+all: rasp4b_core/CMakeFiles/rasp4b_core.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core.dir/rule
+
+# Convenience name for target.
+rasp4b_core: rasp4b_core/CMakeFiles/rasp4b_core.dir/rule
+
+.PHONY : rasp4b_core
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all: infrared_control/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all: rasp4b_core/CMakeFiles/_rasp4b_core_generate_messages_check_deps_SensorState.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=13 "Built target rasp4b_core_generate_messages_nodejs"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rasp4b_core_generate_messages_nodejs: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/rule
+
+.PHONY : rasp4b_core_generate_messages_nodejs
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/all: rasp4b_core/CMakeFiles/rasp4b_core_generate_messages_nodejs.dir/all
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num= "Built target rasp4b_core_gennodejs"
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/rule
+
+# Convenience name for target.
+rasp4b_core_gennodejs: rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/rule
+
+.PHONY : rasp4b_core_gennodejs
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/build.make rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/rasp4b_core_gennodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target rasp4b_core/CMakeFiles/driver.dir
+
+# All Build rule for target.
+rasp4b_core/CMakeFiles/driver.dir/all:
+	$(MAKE) -f rasp4b_core/CMakeFiles/driver.dir/build.make rasp4b_core/CMakeFiles/driver.dir/depend
+	$(MAKE) -f rasp4b_core/CMakeFiles/driver.dir/build.make rasp4b_core/CMakeFiles/driver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles --progress-num=1,2 "Built target driver"
+.PHONY : rasp4b_core/CMakeFiles/driver.dir/all
+
+# Include target in all.
+all: rasp4b_core/CMakeFiles/driver.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+rasp4b_core/CMakeFiles/driver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rasp4b_core/CMakeFiles/driver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/code/loui_robot_rasp4b_ws/build/CMakeFiles 0
+.PHONY : rasp4b_core/CMakeFiles/driver.dir/rule
+
+# Convenience name for target.
+driver: rasp4b_core/CMakeFiles/driver.dir/rule
+
+.PHONY : driver
+
+# clean rule for target.
+rasp4b_core/CMakeFiles/driver.dir/clean:
+	$(MAKE) -f rasp4b_core/CMakeFiles/driver.dir/build.make rasp4b_core/CMakeFiles/driver.dir/clean
+.PHONY : rasp4b_core/CMakeFiles/driver.dir/clean
+
+# clean rule for target.
+clean: rasp4b_core/CMakeFiles/driver.dir/clean
 
 .PHONY : clean
 

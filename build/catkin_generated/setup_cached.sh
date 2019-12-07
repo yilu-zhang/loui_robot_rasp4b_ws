@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/pi/code/loui_robot_rasp4b_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/pi/code/loui_robot_rasp4b_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/pi/code/loui_robot_rasp4b_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/pi/code/loui_robot_rasp4b_ws/build"
+export PYTHONPATH="/home/pi/code/loui_robot_rasp4b_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/code/loui_robot_rasp4b_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/pi/code/loui_robot_rasp4b_ws/src:$ROS_PACKAGE_PATH"

@@ -72,7 +72,6 @@ int main(int argc, char **argv)
 	struct lirc_config *config;
 	int buttonTimer = millis();
 	char *code;
-	//char *c;
 	
 	ros::init(argc, argv, "infrared_control");
 	ros::NodeHandle n;
@@ -102,7 +101,6 @@ int main(int argc, char **argv)
 	msg.angular.z=0;
 	
 	float vel_set=0;
-	//bool pub_flag=true;
 	bool set_vel_flag=false;
 	int input_num = 0;
 	
@@ -418,18 +416,17 @@ int main(int argc, char **argv)
 			infrared_pub.publish(msg);	
 		}
 
-		ros::spinOnce();
 		free(code);
 		loop_rate.sleep();
 	}
 	
-	ROS_INFO("exit while");
+	//ROS_INFO("exit while");
 	lirc_freeconfig(config);
-	ROS_INFO("1");	
+	//ROS_INFO("1");	
 	lirc_deinit();
-	ROS_INFO("2");
+	//ROS_INFO("2");
 	exit(EXIT_SUCCESS);
-	ROS_INFO("3");
+	//ROS_INFO("3");
 	return 0;
 }
 

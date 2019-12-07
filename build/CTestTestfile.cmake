@@ -5,3 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("infrared_control")
+subdirs("rasp4b_core")

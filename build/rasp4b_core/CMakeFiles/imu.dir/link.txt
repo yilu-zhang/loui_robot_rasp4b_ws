@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libimu.so -o /home/pi/code/loui_robot_rasp4b_ws/devel/lib/libimu.so CMakeFiles/imu.dir/lib/imu.cpp.o  -L/home/pi/code/loui_robot_rasp4b_ws/src/rasp4b_core/lib 

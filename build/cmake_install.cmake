@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/pi/code/loui_robot_rasp4b_ws/build/infrared_control/cmake_install.cmake")
+  include("/home/pi/code/loui_robot_rasp4b_ws/build/rasp4b_core/cmake_install.cmake")
 
 endif()
 

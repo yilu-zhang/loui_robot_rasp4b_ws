@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libdriver.so -o /home/pi/code/loui_robot_rasp4b_ws/devel/lib/libdriver.so CMakeFiles/driver.dir/lib/driver.cpp.o  -L/home/pi/code/loui_robot_rasp4b_ws/src/rasp4b_core/lib 
