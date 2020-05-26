@@ -16,6 +16,7 @@
 //#include "std_msgs.h"
 #include "geometry_msgs/Twist.h"
 #include "rasp4b_core/SensorState.h"
+#include "sensor_msgs/Imu.h"
 
 #include "usbcan.h"
 #include "driver.h"
@@ -42,9 +43,9 @@ int main(int argc, char **argv)
 
 	ros::NodeHandle n;
 
-	ros::Subscriber sub= n.subscribe("/loui_robot1/cmd_vel", 100,cmd_vel_callback);
-	ros::Publisher motor_pub = n.advertise<rasp4b_core::SensorState>\
-		("sensor_state", 10);
+	ros::Subscriber control_sub = n.subscribe("/loui_robot1/cmd_vel", 100,cmd_vel_callback);
+	ros::Publisher motor_pub = n.advertise<rasp4b_core::SensorState>("sensor_state", 10);
+	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu>("/loui_robot1/imu", 10);
 	
 	driver_init();
 	imu_init(fd);
@@ -52,8 +53,21 @@ int main(int argc, char **argv)
 	int reclen=0,ind=0,i=0;
 	VCI_CAN_OBJ rec[3000];//接收缓存，设为3000为佳。
 	
-	ros::Rate loop_rate(10);
-	printf("ready!\n");
+	printf("Robot init success!\n");
+	
+	VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100);
+	double delay_t = 1;
+	double expected_t = ros::Time::now().toSec() + delay_t - 0.0605;
+	
+	while(ros::Time::now().toSec() < expected_t);
+	VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100);
+	expected_t = ros::Time::now().toSec() + delay_t - 0.0305;
+	
+	while(ros::Time::now().toSec() < expected_t);
+	VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100);
+	expected_t = ros::Time::now().toSec() + delay_t - 0.0005;
+	
+	
 	while(ros::ok())
 	{
 		ros::spinOnce();
