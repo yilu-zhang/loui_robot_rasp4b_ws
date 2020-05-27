@@ -100,9 +100,9 @@ void driver_init(void)
 	send[0].ID=0x1A;
     send[1].ID=0x2A;
 	
-	//the period of sending current,velocity and position is 10ms
-    send[0].Data[0] = 0x0A; 
-    send[1].Data[0] = 0x0A;
+	//the period of sending current,velocity and position is 1ms
+    send[0].Data[0] = 0x01; 
+    send[1].Data[0] = 0x01;
 	//don't send CTL1/CTL2
     send[0].Data[1] = 0x00;
     send[1].Data[1] = 0x00;
