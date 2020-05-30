@@ -20,7 +20,6 @@
 
 #include "usbcan.h"
 #include "driver.h"
-#include "imu.h"
 
 #define G 9.81007 //vins euroc
 #define REDUCE_RATIO 14
@@ -28,10 +27,6 @@
 #define D 0.21
 #define MI_PI 3.141592654
 
-
-int fd;
-int acclX, acclY, acclZ;
-int gyroX, gyroY, gyroZ;
 
 void cmd_vel_callback(const geometry_msgs::Twist::ConstPtr& msg)
 {
@@ -54,14 +49,12 @@ int main(int argc, char **argv)
 	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu>("/loui_robot1/imu", 10);
 	
 	driver_init();
-	imu_init(fd);
 	
 	int reclen=0,ind=0,i=0;
 	VCI_CAN_OBJ rec[3000];//接收缓存，设为3000为佳。
 	
 	printf("Robot init success!\n");
 	
-	sensor_msgs::Imu imu;
 	rasp4b_core::SensorState motor_real;
 	double camera_T_start_t,error_time;
 	int wrong_cnt=0;
@@ -70,78 +63,32 @@ int main(int argc, char **argv)
 	len=VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100);
 	//printf("len:%d\n",len);
 	double imu_T = 0.01;
-	double expected_t = ros::Time::now().toSec() + 0.0405;
+	double expected_t = ros::Time::now().toSec() + 0.032;
 	
-	for(int i = 0;i<50;i++)
+	for(int i = 0;i<10;i++)
 	{
 		while(ros::Time::now().toSec() < expected_t);
 		len=VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100);
-		//printf("len:%d\n",len);
-		read_word_2c(0x3B,fd);
-		read_word_2c(0x3D,fd);
-		read_word_2c(0x3F,fd);
-		read_word_2c(0x43,fd);
-		read_word_2c(0x45,fd);
-		read_word_2c(0x47,fd);
-		expected_t = expected_t + 0.0405;
+		printf("len:%d\n",len);
+		expected_t = expected_t + 0.04;
 	}
-	
-	expected_t = expected_t - 0.031;
-	
+		
 	while(ros::ok())
 	{
-		camera_T_start_t = expected_t;
-		for(int i = 0;i<4;i++)
-		{			
-			while(ros::Time::now().toSec() < expected_t);
-			double start_t_1 = ros::Time::now().toSec(),start_t_2;
-			imu.header.stamp = ros::Time().fromSec(expected_t);
-			error_time = ros::Time::now().toSec() - expected_t;
-			if(error_time>0.002||error_time<-0.002){
-				//printf("The time error:%f\n",error_time);
-			}
-			
-			start_t_2 = ros::Time::now().toSec();
-			acclX = read_word_2c(0x3B,fd);
-			acclY = read_word_2c(0x3D,fd);
-			acclZ = read_word_2c(0x3F,fd);
-			gyroX = read_word_2c(0x43,fd);
-			gyroY = read_word_2c(0x45,fd);
-			gyroZ = read_word_2c(0x47,fd);
-			//printf("Reading imu time:%f\n",ros::Time::now().toSec()-start_t_2);
-			
-			imu.linear_acceleration.x = acclX*G/16384.0;
-			imu.linear_acceleration.y = acclY*G/16384.0;
-			imu.linear_acceleration.z = acclZ*G/16384.0;
-						
-			imu.angular_velocity.x = gyroX/131.0;
-			imu.angular_velocity.y = gyroY/131.0;;
-			imu.angular_velocity.z = gyroZ/131.0;;
-			//imu_pub.publish(imu);
-						
-			//printf("Process imu time:%f\n",ros::Time::now().toSec()-start_t_1);
-			expected_t = expected_t + imu_T;
-			if(ros::Time::now().toSec() > expected_t)
-			{
-				//printf("timeout in 1,time:%f\n",ros::Time::now().toSec()-start_t_1);
-			}
-		}
-
-		double start_t=ros::Time::now().toSec();
-		double expected_start_t = expected_t-imu_T+0.0005;
-		while(ros::Time::now().toSec() < expected_start_t);
-		
+		while(ros::Time::now().toSec() < expected_t);
+		double start_t = ros::Time::now().toSec();		
 		bool r_read_flag=true,l_read_flag=true;
 		int r_rec_cnt=9,l_rec_cnt=9,pub_cnt=4;
 		int r_pos,r_vel,r_cur,l_pos,l_vel,l_cur;
 		
 		if((reclen=VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100))>0)//调用接收函数，如果有数据，进行数据处理显示。
-         	{
-			//printf("Receive encoder data length:%d\n",reclen);
+         {
+			printf("Receive encoder data length:%d\n",reclen);
+			camera_T_start_t = ros::Time::now().toSec();
 			if(reclen > 82 || reclen < 78)
 			{
 				wrong_cnt++;
-				//printf("Wrong encoder receive count:%d,len:%d\n",wrong_cnt,reclen);
+				printf("Wrong encoder receive count:%d,len:%d\n",wrong_cnt,reclen);
 			}
 			for(int i = reclen-1;i<reclen;i--)
 			{
@@ -201,15 +148,15 @@ int main(int argc, char **argv)
 
 	         else
        		 {
-               		 //printf("receive2 fail!\n");
+               		 printf("receive2 fail!\n");
        		 }
 		 
 		 ros::spinOnce();
+		 expected_t = expected_t + 0.04;
 		 if(ros::Time::now().toSec() > expected_t)
 		 {
-			//printf("timeout in 2,error time:%f %f\n",ros::Time::now().toSec()-expected_t,ros::Time::now().toSec()-start_t);
-		 }
-		 //printf("Process encoder time:%f\n",ros::Time::now().toSec()-start_t);		
+			printf("timeout in 2,error time:%f %f\n",ros::Time::now().toSec()-expected_t,ros::Time::now().toSec()-start_t);
+		 }		 		
 	}
 	
         return 0;
