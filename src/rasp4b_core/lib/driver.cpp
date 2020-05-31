@@ -135,7 +135,7 @@ void driver_init(void)
 	        usleep(100000);//延时100ms。
 		VCI_CloseDevice(VCI_USBCAN2,0);//关闭设备。
 		exit(1);
-	}	
+	}
 	usleep(100000);
 }
 
@@ -161,7 +161,7 @@ void left_motor_action(float vel_left)
 	u_int16_t vel_rpm;
 	VCI_CAN_OBJ send;
     send.ID=0x27;
-    send.SendType=1;
+    send.SendType=0;
     send.DataLen=8;
     send.ExternFlag=0;
     send.RemoteFlag=0;
@@ -188,7 +188,7 @@ void right_motor_action(float vel_right)
 	u_int16_t vel_rpm;
 	VCI_CAN_OBJ send;
     send.ID=0x17;
-    send.SendType=1;
+    send.SendType=0;
     send.DataLen=8;
     send.ExternFlag=0;
     send.RemoteFlag=0;

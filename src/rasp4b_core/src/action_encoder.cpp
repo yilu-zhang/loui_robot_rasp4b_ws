@@ -39,14 +39,13 @@ void cmd_vel_callback(const geometry_msgs::Twist::ConstPtr& msg)
 
 int main(int argc, char **argv)
 {
-	ros::init(argc, argv, "rasp4b_core");
-	printf(">>this is first control node!\r\n");//指示程序已运行
+	ros::init(argc, argv, "action_encoder");
+	printf("this is action_encoder node!\r\n");//指示程序已运行
 
 	ros::NodeHandle n;
 
-	ros::Subscriber control_sub = n.subscribe("/loui_robot1/cmd_vel", 100,cmd_vel_callback);
+	ros::Subscriber control_sub = n.subscribe("/loui_robot1/cmd_vel", 1000,cmd_vel_callback);
 	ros::Publisher motor_pub = n.advertise<rasp4b_core::SensorState>("/loui_robot1/sensor_state", 10);
-	ros::Publisher imu_pub = n.advertise<sensor_msgs::Imu>("/loui_robot1/imu", 10);
 	
 	driver_init();
 	
@@ -83,7 +82,7 @@ int main(int argc, char **argv)
 		
 		if((reclen=VCI_Receive(VCI_USBCAN2,0,ind,rec,3000,100))>0)//调用接收函数，如果有数据，进行数据处理显示。
          {
-			printf("Receive encoder data length:%d\n",reclen);
+			//printf("Receive encoder data length:%d\n",reclen);
 			camera_T_start_t = ros::Time::now().toSec();
 			if(reclen > 82 || reclen < 78)
 			{

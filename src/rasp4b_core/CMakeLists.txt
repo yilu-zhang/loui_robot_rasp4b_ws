@@ -149,6 +149,11 @@ target_link_libraries(action_encoder
   ${catkin_LIBRARIES}
   controlcan wiringPi m usbcan driver)  
 
+add_executable(imu_node src/imu_node.cpp)
+target_link_libraries(imu_node
+  ${catkin_LIBRARIES}
+  wiringPi m imu)  
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/rasp4b_core.cpp
