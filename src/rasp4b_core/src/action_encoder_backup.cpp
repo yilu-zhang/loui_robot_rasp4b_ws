@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 	ros::NodeHandle n;
 
 	ros::Subscriber control_sub = n.subscribe("/loui_robot1/cmd_vel", 1000,cmd_vel_callback);
-	ros::Publisher motor_pub = n.advertise<rasp4b_core::SensorState>("/loui_robot1/sensor_state", 1000);
+	ros::Publisher motor_pub = n.advertise<rasp4b_core::SensorState>("/loui_robot1/sensor_state", 10);
 	
 	driver_init();
 	
@@ -84,18 +84,23 @@ int main(int argc, char **argv)
          {
 			//printf("Receive encoder data length:%d\n",reclen);
 			camera_T_start_t = ros::Time::now().toSec();
-			//all_cnt = reclen/2;
 			if(reclen > 82 || reclen < 78)
 			{
 				wrong_cnt++;
 				printf("Wrong encoder receive count:%d,len:%d\n",wrong_cnt,reclen);
 			}
-			for(int i = 0;i<reclen;i++)
+			for(int i = reclen-1;i<reclen;i--)
 			{
 				//printf("the time:%d %f\n",rec[i].TimeFlag,rec[i].TimeStamp);
+				if(i<0)
+				{
+					printf("array index out\n");
+					break;
+				}
 				if(rec[i].ID == 27)
 				{
 					r_rec_cnt++;
+					if(r_rec_cnt == 10)
 					{
 						r_cur=(rec[i].Data[0]<<8)|rec[i].Data[1];
 						r_vel=(rec[i].Data[2]<<8)|rec[i].Data[3];
@@ -106,6 +111,7 @@ int main(int argc, char **argv)
 				else if(rec[i].ID == 43)
 				{
 					l_rec_cnt++;
+					if(l_rec_cnt == 10)
 					{
 						l_cur=(rec[i].Data[0]<<8)|rec[i].Data[1];
 						l_vel=(rec[i].Data[2]<<8)|rec[i].Data[3];
@@ -114,15 +120,15 @@ int main(int argc, char **argv)
 					}
 				}
 				
-				if(r_rec_cnt>=1 && l_rec_cnt >= 1)
+				if(r_rec_cnt>=10 && l_rec_cnt >= 10)
 				{
 					if(r_read_flag != l_read_flag)
 					{
-						printf("Right and left encoder syn error\n");
+						//printf("Right and left encoder syn error\n");
 						return -1;
 					}
 										
-					motor_real.header.stamp = ros::Time().fromSec(camera_T_start_t-int((reclen-i)/2)*0.001);
+					motor_real.header.stamp = ros::Time().fromSec(camera_T_start_t-pub_cnt*0.01);
 					motor_real.r_current = r_cur/10.0;
 					motor_real.r_velocity = r_vel*M_PI*D/(60*REDUCE_RATIO);
 					motor_real.r_position = r_pos*M_PI*D/(QC*REDUCE_RATIO);
@@ -131,9 +137,13 @@ int main(int argc, char **argv)
 					motor_real.l_position = l_pos*M_PI*D/(QC*REDUCE_RATIO);	
 					motor_pub.publish(motor_real);
 					
-					
-					r_rec_cnt = 0;
-					l_rec_cnt = 0;
+					pub_cnt++;
+					if(pub_cnt == 4)break;
+					else
+					{
+						r_rec_cnt = r_rec_cnt%10;
+						l_rec_cnt = l_rec_cnt%10;
+					}
 				}				
 				
 			}

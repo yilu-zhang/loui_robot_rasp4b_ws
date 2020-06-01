@@ -68,12 +68,14 @@ int main(int argc, char **argv)
 			}*/
 			
 			start_t_2 = ros::Time::now().toSec();
-			acclX = read_word_2c(0x3B,fd);
+			
 			acclY = read_word_2c(0x3D,fd);
 			acclZ = read_word_2c(0x3F,fd);
+			acclX = read_word_2c(0x3B,fd);
+			gyroZ = read_word_2c(0x47,fd);
 			gyroX = read_word_2c(0x43,fd);
 			gyroY = read_word_2c(0x45,fd);
-			gyroZ = read_word_2c(0x47,fd);
+			
 			imu.header.stamp = ros::Time().fromSec((ros::Time::now().toSec()+start_t_2)/2);
 			//printf("Reading imu time:%f\n",ros::Time::now().toSec()-start_t_2);
 			
@@ -81,9 +83,9 @@ int main(int argc, char **argv)
 			imu.linear_acceleration.y = acclY*G/16384.0;
 			imu.linear_acceleration.z = acclZ*G/16384.0;
 						
-			imu.angular_velocity.x = gyroX*PI_PER_DEGREE/131.0;
-			imu.angular_velocity.y = gyroY*PI_PER_DEGREE/131.0;;
-			imu.angular_velocity.z = gyroZ*PI_PER_DEGREE/131.0;;
+			imu.angular_velocity.x = gyroX*PI_PER_DEGREE/131.072;
+			imu.angular_velocity.y = gyroY*PI_PER_DEGREE/131.072;
+			imu.angular_velocity.z = gyroZ*PI_PER_DEGREE/131.072;
 			imu_pub.publish(imu);
 						
 			//printf("Process imu time:%f\n",ros::Time::now().toSec()-start_t_1);
